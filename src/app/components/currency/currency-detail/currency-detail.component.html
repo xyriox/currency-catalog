@@ -1,0 +1,32 @@
+<h1>{{currency?.id}}</h1>
+<hr>
+<h3>
+    <strong>code : </strong>{{currency?.attributes?.code}}</h3>
+<h3>
+    <strong>name :</strong>{{currency?.attributes?.name}}
+</h3>
+<h3>
+    <strong>currencyType :</strong>{{currency?.attributes?.currencyType}}
+</h3>
+<h3>
+    <strong>codeIsoNumeric3 :</strong>{{currency?.attributes?.codeIsoNumeric3}}
+</h3>
+<h3>
+    <strong>codeIsoAlpha3 :</strong>{{currency?.attributes?.codeIsoAlpha3}}
+</h3>
+<h3>
+    <strong>symbol :</strong>{{currency?.attributes?.symbol}}
+</h3>
+<h3>
+    <strong>nativeSymbol :</strong>{{currency?.attributes?.nativeSymbol}}
+</h3>
+<h3>
+    <strong>category :</strong>{{currency?.attributes?.category}}
+</h3>
+<h3>
+    <strong>exponent :</strong>{{currency?.attributes?.exponent}}
+</h3>
+
+<hr>
+
+<a [routerLink]="['/']">Go back</a>

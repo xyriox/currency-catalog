@@ -1,0 +1,29 @@
+<div class="col-md-12">
+    <input type="text" [ngModel]="textfilter" (ngModelChange)="changeTextfilter($event)" />
+    <select [(ngModel)]="filter">
+        <option [value]="'search'">Any</option>
+        <option [value]="'id'">ID</option>
+        <option [value]="'code'">CODE</option>
+        <option [value]="'name'">NAME</option>
+        <option [value]="'type'">TYPE</option>
+    </select>
+</div>
+<br/>
+<hr/>
+<div *ngFor="let currency of currenciesPage?.currencies">
+    <app-currency [currency]="currency"></app-currency>
+</div>
+<br/>
+<hr/>
+<div class="col-md-12">
+    <div class="col-md-2">
+        <select [ngModel]="elementPerPage" (ngModelChange)="changeElementPerPage($event)">
+            <option [value]="10">10</option>
+            <option [value]="50">50</option>
+            <option [value]="100">100</option>
+        </select>
+    </div>
+    <pagination [totalItems]="currenciesPage?.total" [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
+        lastText="&raquo;" (pageChanged)="changePage($event)" [maxSize]="5"></pagination>
+
+</div>

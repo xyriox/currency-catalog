@@ -1,5 +1,10 @@
+import { CurrencyAttributes } from "./currencyattributes.model";
+
 export class Currency {
-    shortname:string;
-    name:string;
-    symbol:string;
+    id: string;
+    attributes: CurrencyAttributes;
+    constructor(json: any) {
+        this.id = json.id;
+        this.attributes = new CurrencyAttributes(json.attributes);
+    }
 }

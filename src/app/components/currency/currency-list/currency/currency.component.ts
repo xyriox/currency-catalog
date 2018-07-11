@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Currency } from '../../../models/currency.model';
 import { Router } from '@angular/router';
-import { CurrencyService } from '../../../services/currency.service';
+import { Currency } from '../../../../models/currency.model';
+import { CurrencyService } from '../../../../services/currency.service';
 
 @Component({
   selector: 'app-currency',
@@ -16,9 +16,9 @@ export class CurrencyComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   currencyDetails(currency:Currency) {
-    this.currencyService.currency=currency;
-    this.router.navigate(['/currencies/detail']);
+    this.router.navigate(['/currency',currency.id]);
 
   }
 }
